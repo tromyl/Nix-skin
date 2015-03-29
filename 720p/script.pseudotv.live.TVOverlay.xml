@@ -261,7 +261,7 @@
 			</control>
 			</control>
 			<!-- Videos Info -->
-			<control type="group" id="1">
+			<!--control type="group" id="1">
 				<posx>205</posx>
 				<posy>275</posy>
 				<width>600</width>
@@ -362,7 +362,7 @@
                     <height>50</height>
                     <label></label>
                     <font>font30_title</font>
-                    <textcolor>FF0297eb</textcolor>
+                    <textcolor>FFFFFFFF</textcolor>
                     <scroll>true</scroll>
                     <wrapmultiline>false</wrapmultiline>
                     <scrollspeed>50</scrollspeed>

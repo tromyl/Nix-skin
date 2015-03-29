@@ -276,7 +276,7 @@
                 <scrollsuffix> - </scrollsuffix>
             </control> 
 			  <control type="label" id="500">
-			    <posx>370</posx>
+			    <posx>320</posx>
             <posy>400</posy>
                 <description>Show Name Label</description>
                 <width min="5" max="840">auto</width>

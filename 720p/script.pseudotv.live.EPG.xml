@@ -14,7 +14,7 @@
     <controls>
         <control type="button" id="99">
             <visible>false</visible>			
-            <label>0xFFFFFFFF</label><!--focused text color-->
+            <label>0xFFEB9E17</label><!--focused text color-->
         </control>
         <control type="button" id="100">
             <visible>false</visible>			
@@ -83,7 +83,7 @@
             <!-- ################################################################## -->
        
         </control>
-<!--FIRST LINE-->
+		
 		 <control type="label">
             <description>PLTV</description>
             <posx>15</posx>
@@ -94,7 +94,7 @@
             <font>font30_title</font>
             <align>left</align>
             <aligny>center</aligny>
-            <textcolor>FFFFFFFF</textcolor>
+            <textcolor>FFEB9E17</textcolor>
         </control>
 			 <control type="label" id="101">  
             <description>Time Left Label</description>
@@ -146,21 +146,36 @@
             <textcolor>FFFFFFFF</textcolor>
         </control>
 			<!--LANDSCAPE WINDOW-->
-		  <control type="group">  
-					<control type="image" id="510">
+		 <control type="group">  
+			<control type="image" id="510">
             <description>Dynamic art</description><!-- Calls art by label given-->
             <posx>965</posx>
             <posy>450</posy>
             <width>310</width>
-            <height>180</height>
+            <height>170</height>
 			<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="video_diffuse.png"></texture>
-		</control>
-		  <control type="button" id="509">
+			</control>
+			<control type="button" id="509">
             <description>Dynamic art</description>
-            <label>landscape</label>
+            <label>fanart</label>
             <visible>false</visible>
-        </control>
+			</control>
+          </control>
+		 <control type="group"> 
+			<control type="image" id="508">
+            <description>Dynamic art</description><!-- Calls art by label given-->
+            <posx>965</posx>
+            <posy>590</posy>
+            <width>310</width>
+            <height>150</height>
+			<aspectratio align="right" aligny="center">keep</aspectratio>
+			</control>
+		  <control type="button" id="507">
+            <description>Dynamic art</description>
+            <label>banner</label>
+            <visible>false</visible>
+			</control>
             </control>
 <!--Dark Column-->
         <control type="image">
@@ -170,7 +185,7 @@
             <width>215</width>
             <height>45</height>
             <colordiffuse>FFFFFFFF</colordiffuse>
-            <texture>pstvButtonNoFocus.png</texture>
+            <texture>pstvButtonNoFocus2.png</texture>
         </control>
         <control type="image">
             <description>Channel Overlay</description>
@@ -179,7 +194,7 @@
             <width>215</width>
             <height>45</height>
             <colordiffuse>FFFFFFFF</colordiffuse>
-            <texture>pstvButtonNoFocus.png</texture>
+            <texture>pstvButtonNoFocus2.png</texture>
         </control>
         <control type="image">
             <description>Channel Overlay</description>
@@ -188,7 +203,7 @@
             <width>215</width>
             <height>45</height>
             <colordiffuse>FFFFFFFF</colordiffuse>
-            <texture>pstvButtonNoFocus.png</texture>
+            <texture>pstvButtonNoFocus2.png</texture>
         </control>    
         <control type="image">
             <description>Channel Overlay</description>
@@ -197,7 +212,7 @@
             <width>215</width>
             <height>45</height>
             <colordiffuse>FFFFFFFF</colordiffuse>
-            <texture>pstvButtonNoFocus.png</texture>
+            <texture>pstvButtonNoFocus2.png</texture>
         </control>
         <control type="image">
             <description>Channel Overlay</description>
@@ -206,7 +221,7 @@
             <width>215</width>
             <height>45</height>
             <colordiffuse>FFFFFFFF</colordiffuse>
-            <texture>pstvButtonNoFocus.png</texture>
+            <texture>pstvButtonNoFocus2.png</texture>
         </control>
         <control type="image">
             <description>Channel Overlay</description>
@@ -215,19 +230,19 @@
             <width>215</width>
             <height>45</height>
             <colordiffuse>FFFFFFFF</colordiffuse>
-            <texture>pstvButtonNoFocus.png</texture>
+            <texture>pstvButtonNoFocus2.png</texture>
         </control>
         <!--Time/Weather-->    
         <control type="label">
             <description>Time</description>
             <posx>-100</posx>
-            <posy>400</posy>
+            <posy>405</posy>
             <width>300</width>
-            <height>360</height>
+            <height>40</height>
             <label>$INFO[System.Time]</label>
             <font>font30_title</font>
             <align>center</align>
-            <textcolor>FF04AEDA</textcolor>
+            <textcolor>FFEB9E17</textcolor>
         </control>
         <!--Weather-->
         <control type="image" id="800">
@@ -236,7 +251,18 @@
             <width>50</width>
             <height>40</height>
             <aspectratio align="center">keep</aspectratio>
-			<texture>$INFO[Weather.FanartCode,weather/,.png]</texture>
+			<info>Window(weather).Property(Current.ConditionIcon)</info>
+        </control>
+		  <control type="label">
+            <description>Weather</description>
+            <posx>180</posx>
+            <posy>410</posy>
+            <width min="40" max="100">auto</width>
+            <height>10</height>
+            <label>$INFO[Window(weather).Property(Current.Temperature)] $INFO[System.TemperatureUnits]</label>
+            <font>Font13_title</font>
+            <align>center</align>
+            <textcolor>FFEB9E17</textcolor>
         </control>
 		 <control type="label" id="502">
             <description>Show Description Label</description>
@@ -261,15 +287,16 @@
             <orientation>horizontal</orientation>
             <itemgap>5</itemgap>
             </control>
+			
             <control type="label" id="501">
 			<posx>320</posx>
             <posy>450</posy>
                 <description>Show Title Label</description>
-                <width min="55" max="560">auto</width>
+                <width min="55" max="600">auto</width>
                 <height>30</height>
-                <label>"Show Title,","</label>
+                <label>"(Show Title)</label>
                 <font>font13_title</font>
-                <textcolor>white</textcolor>
+                <textcolor>FFEB9E17</textcolor>
 				 <scroll>true</scroll>
                 <wrapmultiline>false</wrapmultiline>
                 <scrollspeed>50</scrollspeed>
@@ -285,7 +312,7 @@
                 <font>font30_title</font>
                 <align>left</align>
                 <aligny>center</aligny>
-                <textcolor>white</textcolor>
+                <textcolor>FFEB9E17</textcolor>
         </control>
         <control type="label" id="502">
             <description>Show Description Label</description>
@@ -294,7 +321,7 @@
            <width>auto</width>
             <height>200</height>
             <label>Show Description</label>
-            <font>font13_title</font>
+            <font>font24_title</font>
             <align>left</align>
             <aligny>top</aligny>
             <textcolor>FFFFFFFF</textcolor>
@@ -322,9 +349,9 @@
 		<control type ="group">
 			<visible>VideoPlayer.Content(episodes)</visible>
 			<control type="image" id="7778">
-				<posx>20</posx>
+				<posx>0</posx>
 				<posy>590</posy>
-				<width>250</width>
+				<width>290</width>
 				<height>150</height>
 				<texture background="true">$INFO[Player.FolderPath]../banner.jpg</texture>
 				<aspectratio align="right" aligny="center">keep</aspectratio>
@@ -333,9 +360,9 @@
 		<control type ="group">
 			<visible>VideoPlayer.Content(movies)</visible>
 			<control type="image" id="8889">
-				<posx>20</posx>
+				<posx>0</posx>
 				<posy>590</posy>
-				<width>250</width>
+				<width>290</width>
 				<height>150</height>
 				<texture background="true">$INFO[Player.FolderPath]logo.png</texture>
 				<aspectratio align="right" aligny="center">keep</aspectratio>
@@ -398,7 +425,7 @@
         <!--CHANNEL BUTTONS AND LABELS-->
         <control type="label" id="301">
             <description>Channel 1 Name</description>
-            <posx>75</posx>
+            <posx>45</posx>
             <posy>90</posy>
             <width>150</width>
             <height>42</height>
@@ -411,7 +438,7 @@
         </control>
         <control type="label" id="311">
             <description>Channel 1 Number</description>
-            <posx>50</posx>
+            <posx>30</posx>
             <posy>90</posy>
             <width>100</width>
             <height>42</height>
@@ -434,7 +461,7 @@
         </control>
         <control type="label" id="302">
             <description>Channel 2 Name</description>
-            <posx>75</posx>
+            <posx>45</posx>
             <posy>140</posy>
             <width>150</width>
             <height>42</height>
@@ -447,7 +474,7 @@
         </control>
         <control type="label" id="312">
             <description>Channel 2 Number</description>
-            <posx>50</posx>
+            <posx>30</posx>
             <posy>140</posy>
             <width>100</width>
             <height>42</height>
@@ -470,7 +497,7 @@
         </control>
         <control type="label" id="303">
             <description>Channel 3 Name</description>
-            <posx>75</posx>
+            <posx>45</posx>
             <posy>190</posy>
             <width>150</width>
             <height>42</height>
@@ -483,7 +510,7 @@
         </control>
         <control type="label" id="313">
             <description>Channel 3 Number</description>
-            <posx>50</posx>
+            <posx>30</posx>
             <posy>190</posy>
             <width>100</width>
             <height>42</height>
@@ -506,9 +533,9 @@
         </control>
         <control type="label" id="304">
             <description>Channel 4 Name</description>
-            <posx>75</posx>
+            <posx>45</posx>
             <posy>240</posy>
-            <width>200</width>
+            <width>150</width>
             <height>42</height>
             <label>Channel</label>
             <font>font13_title</font>
@@ -519,7 +546,7 @@
         </control>
         <control type="label" id="314">
             <description>Channel 4 Number</description>
-            <posx>50</posx>
+            <posx>30</posx>
             <posy>240</posy>
             <width>100</width>
             <height>42</height>
@@ -542,7 +569,7 @@
         </control>
         <control type="label" id="305">
             <description>Channel 5 Name</description>
-            <posx>75</posx>
+            <posx>45</posx>
             <posy>290</posy>
             <width>150</width>
             <height>42</height>
@@ -555,7 +582,7 @@
         </control>
         <control type="label" id="315">
             <description>Channel 5 Number</description>
-            <posx>50</posx>
+            <posx>30</posx>
             <posy>290</posy>
             <width>100</width>
             <height>42</height>
@@ -578,7 +605,7 @@
         </control>        
         <control type="label" id="306">
             <description>Channel 6 Name</description>
-            <posx>75</posx>
+            <posx>45</posx>
             <posy>340</posy>
             <width>150</width>
             <height>42</height>
@@ -591,7 +618,7 @@
         </control>
         <control type="label" id="316">
             <description>Channel 6 Number</description>
-            <posx>50</posx>
+            <posx>30</posx>
             <posy>340</posy>
             <width>100</width>
             <height>42</height>
@@ -683,6 +710,14 @@
             <posy>50</posy>
             <width>1</width>
             <height>30</height>
+            <texture>3333V.png</texture>
+        </control>
+		<control type="image">
+            <description>Description Line</description>
+            <posx>960</posx>
+            <posy>450</posy>
+            <width>1</width>
+            <height>330</height>
             <texture>3333V.png</texture>
         </control>
 		<!--rss control-->

@@ -48,9 +48,9 @@
 			    <visible>VideoPlayer.Content(Movies)</visible>
 			<control type="image">
                 <description>Info Background Image</description>
-                <posx>-40</posx>
+                <posx>-50</posx>
                 <posy>25</posy>
-                <width>480</width>
+                <width>580</width>
                 <height>520</height>
                 <texture>border.png</texture>
             </control>
@@ -68,7 +68,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>font30_title</font>
-				<textcolor>white</textcolor>
+				<textcolor>FFEB9E17</textcolor>
 			</control>
 			 <control type="label">
                 <posx>-150</posx>
@@ -79,7 +79,7 @@
                 <label>Genre</label>
                 <font>font13_title</font>
                 <align>center</align>
-                <textcolor>blue</textcolor>
+                <textcolor>FFEB9E17</textcolor>
                 <visible>true</visible>
             </control>
 			<control type="label" id="1">
@@ -104,7 +104,7 @@
                 <label>Director</label>
                 <font>font13_title</font>
                 <align>center</align>
-                <textcolor>blue</textcolor>
+                <textcolor>FFEB9E17</textcolor>
                 <visible>true</visible>
             </control>
 			<control type="label" id="1">
@@ -127,7 +127,7 @@
                 <label>IMBD</label>
                 <font>font13_title</font>
                 <align>center</align>
-                <textcolor>blue</textcolor>
+                <textcolor>FFEB9E17</textcolor>
                 <visible>true</visible>
             </control>
 			<control type="label" id="1">
@@ -149,9 +149,9 @@
 			   	<visible>VideoPlayer.Content(Episodes)</visible>
 				<control type="image">
                 <description>Info Background Image</description>
-                <posx>-40</posx>
+                <posx>-50</posx>
                 <posy>25</posy>
-                <width>480</width>
+                <width>580</width>
                 <height>520</height>
                 <texture>border.png</texture>
             </control>
@@ -165,7 +165,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>font30_title</font>
-				<textcolor>FFFFFFFF</textcolor>
+				<textcolor>FFEB9E17</textcolor>
 				<shadowcolor>55000000</shadowcolor>
 			</control>
 			<control type="image" id="1">
@@ -189,7 +189,7 @@
                 <label>Episode</label>
                 <font>font13_title</font>
                 <align>center</align>
-                <textcolor>blue</textcolor>
+                <textcolor>FFEB9E17</textcolor>
                 <visible>true</visible>
             </control>
 			<control type="label" id="1">
@@ -218,7 +218,7 @@
                 <label>Writer</label>
                 <font>font13_title</font>
                 <align>center</align>
-                <textcolor>blue</textcolor>
+                <textcolor>FFEB9E17</textcolor>
                 <visible>true</visible>
             </control>
 			<control type="label" id="1">
@@ -245,7 +245,7 @@
                 <label>IMBD</label>
                 <font>font13_title</font>
                 <align>center</align>
-                <textcolor>blue</textcolor>
+                <textcolor>FFEB9E17</textcolor>
                 <visible>true</visible>
             </control>
 			<control type="label" id="1">
@@ -342,12 +342,19 @@
 				<visible>!VideoPlayer.Content(Movies)</visible> 
 				<visible>!VideoPlayer.Content(Episodes)</visible>
 			</control>
+			<description>Description Line</description>
+            <posx>200</posx>
+            <posy>595</posy>
+            <width>640</width>
+            <height>1</height>
+            <texture>3333.png</texture>
+        </control>
 			
             
             <!--line 1 -->
             <control type="grouplist">
-                <posx>300</posx>
-                <posy>555</posy>
+                <posx>280</posx>
+                <posy>560</posy>
                 <width>1050</width>
                 <height>50</height>
                 <align>left</align>
@@ -356,13 +363,14 @@
                 <itemgap>10</itemgap>
 				<visible>!VideoPlayer.Content(Movies)</visible>
 				<visible>!VideoPlayer.Content(Episodes)</visible>
+			
                 <control type="label" id="503">
                     <description>Show Name Label</description>
-                    <width min="50" max="480">auto</width>
+                    <width min="50" max="560">auto</width>
                     <height>50</height>
                     <label></label>
                     <font>font30_title</font>
-                    <textcolor>FFFFFFFF</textcolor>
+                    <textcolor>FFEB9E17</textcolor>
                     <scroll>true</scroll>
                     <wrapmultiline>false</wrapmultiline>
                     <scrollspeed>50</scrollspeed>
@@ -377,16 +385,16 @@
                     <font>font14</font>
                     <align>left</align>
                     <aligny>center</aligny>
-                    <textcolor>FFFFFFFF</textcolor>
+                    <textcolor>blue</textcolor>
                     <visible>false</visible>
                 </control> 
             </control>
             <control type="label" id="505">
                 <description>Show Description</description>
-                <posx>300</posx>
-                <posy>620</posy>
-                <width>930</width>
-                <height>80</height>
+                <posx>280</posx>
+                <posy>640</posy>
+                <width>980</width>
+                <height>70</height>
                 <align>left</align>
                 <aligny>top</aligny>
                 <wrapmultiline>true</wrapmultiline>
@@ -437,13 +445,13 @@
             </control>
 			 <control type="label" id="504">
                     <description>Show Title Label</description>
-					<posx>300</posx>
-                <posy>590</posy>
+					<posx>280</posx>
+                <posy>610</posy>
                     <width min="50" max="560">auto</width>
                     <height>50</height>
                     <label></label>
                     <font>font13_title</font>
-                    <textcolor>FFFFFFFF</textcolor>
+                    <textcolor>FFEB9E17</textcolor>
                     <scroll>true</scroll>
                     <wrapmultiline>false</wrapmultiline>
                     <scrollspeed>50</scrollspeed>
@@ -451,6 +459,16 @@
 					  <visible>!VideoPlayer.Content(Movies)</visible>
 					    <visible>!VideoPlayer.Content(Episodes)</visible>
                 </control>
+					 <control type="image">
+            <description>Description Line</description>
+            <posx>300</posx>
+            <posy>607</posy>
+            <width>560</width>
+            <height>1</height>
+            <texture>3333.png</texture>
+			<visible>!VideoPlayer.Content(Movies)</visible>
+					    <visible>!VideoPlayer.Content(Episodes)</visible>
+        </control>
 
         <control type="grouplist">
             <posx>870</posx>

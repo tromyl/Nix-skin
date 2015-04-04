@@ -34,19 +34,13 @@
             <posx>0</posx>
             <posy>0</posy>
             <width>1340</width>
-            <height>720</height>
+            <height>740</height>
             <texture>pstvlInfoWindow1.png</texture>
             <colordiffuse>FFFFFFFF</colordiffuse>
         </control>
-		<control type="image">
-            <description>Info Background</description>
-            <posx>290</posx>
-            <posy>395</posy>
-            <width>1000</width>
-            <height>50</height>
-            <texture>111.png</texture>
-            <colordiffuse>FFFFFFFF</colordiffuse>
-        </control>
+	
+	
+	
 		
 		
         <-!-TEXT Now Playing -->
@@ -86,7 +80,7 @@
 		
 		 <control type="label">
             <description>PLTV</description>
-            <posx>15</posx>
+            <posx>455</posx>
             <posy>10</posy>
             <width>2570</width>
             <height>30</height>
@@ -94,7 +88,7 @@
             <font>font30_title</font>
             <align>left</align>
             <aligny>center</aligny>
-            <textcolor>FFEB9E17</textcolor>
+            <textcolor>FFFFFFFF</textcolor>
         </control>
 			 <control type="label" id="101">  
             <description>Time Left Label</description>
@@ -106,7 +100,7 @@
             <font>font13_title</font>
             <align>left</align>
             <aligny>center</aligny>
-            <textcolor>FFFFFFFF</textcolor>
+            <textcolor>FFEB9E17</textcolor>
         </control>
 		<control type="label" id="102">
             <description>Time Middle Label</description>
@@ -118,7 +112,7 @@
             <font>font13_title</font>
             <align>left</align>
             <aligny>center</aligny>
-            <textcolor>FFFFFFFF</textcolor>
+            <textcolor>FFEB9E17</textcolor>
         </control>
 		<control type="label" id="103">
             <description>Time Right Label</description>
@@ -130,7 +124,7 @@
             <font>font13_title</font>
             <align>left</align>
             <aligny>center</aligny>
-            <textcolor>FFFFFFFF</textcolor>
+            <textcolor>FFEB9E17</textcolor>
         </control>
         <!--Date-->
         <control type="label" id="104">
@@ -143,40 +137,35 @@
             <font>font13_title</font>
             <align>left</align>
             <aligny>center</aligny>
-            <textcolor>FFFFFFFF</textcolor>
+            <textcolor>FFEB9E17</textcolor>
         </control>
 			<!--LANDSCAPE WINDOW-->
-		 <control type="group">  
+		 <control type="group">
+		
+		
 			<control type="image" id="510">
             <description>Dynamic art</description><!-- Calls art by label given-->
-            <posx>965</posx>
-            <posy>450</posy>
-            <width>310</width>
-            <height>170</height>
+            <posx>875</posx>
+            <posy>480</posy>
+            <width>380</width>
+            <height>180</height>
 			<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
-			<texture diffuse="video_diffuse.png"></texture>
+			<texture diffuse="classic2.png"></texture>
 			</control>
+			 <control type="image" id="1">
+			<posx>860</posx>
+			<posy>465</posy>
+			<width>415</width>
+			<height>215</height>
+			<texture>classic.png</texture>
+			<aspectratio align="center" aligny="center">stretch</aspectratio>
+	 	</control>
 			<control type="button" id="509">
             <description>Dynamic art</description>
-            <label>fanart</label>
+            <label>landscape</label>
             <visible>false</visible>
 			</control>
           </control>
-		 <control type="group"> 
-			<control type="image" id="508">
-            <description>Dynamic art</description><!-- Calls art by label given-->
-            <posx>965</posx>
-            <posy>590</posy>
-            <width>310</width>
-            <height>150</height>
-			<aspectratio align="right" aligny="center">keep</aspectratio>
-			</control>
-		  <control type="button" id="507">
-            <description>Dynamic art</description>
-            <label>banner</label>
-            <visible>false</visible>
-			</control>
-            </control>
 <!--Dark Column-->
         <control type="image">
             <description>Channel Overlay</description>
@@ -258,7 +247,7 @@
             <posx>180</posx>
             <posy>410</posy>
             <width min="40" max="100">auto</width>
-            <height>10</height>
+            <height>40</height>
             <label>$INFO[Window(weather).Property(Current.Temperature)] $INFO[System.TemperatureUnits]</label>
             <font>Font13_title</font>
             <align>center</align>
@@ -268,8 +257,8 @@
             <description>Show Description Label</description>
             <posx>320</posx>
             <posy>495</posy>
-           <width min="29" max="600">auto</width>
-            <height>600</height>
+           <width min="29" max="500">auto</width>
+            <height>700</height>
             <label>Show Description</label>
             <font>font13_title</font>
             <align>left</align>
@@ -292,7 +281,7 @@
 			<posx>320</posx>
             <posy>450</posy>
                 <description>Show Title Label</description>
-                <width min="55" max="600">auto</width>
+                <width min="55" max="530">auto</width>
                 <height>30</height>
                 <label>"(Show Title)</label>
                 <font>font13_title</font>
@@ -349,9 +338,9 @@
 		<control type ="group">
 			<visible>VideoPlayer.Content(episodes)</visible>
 			<control type="image" id="7778">
-				<posx>0</posx>
+				<posx>10</posx>
 				<posy>590</posy>
-				<width>290</width>
+				<width>270</width>
 				<height>150</height>
 				<texture background="true">$INFO[Player.FolderPath]../banner.jpg</texture>
 				<aspectratio align="right" aligny="center">keep</aspectratio>
@@ -418,7 +407,7 @@
         </control>
         <control type="group" id="120">
             <posx>260</posx>
-            <posy>90</posy>
+            <posy>85</posy>
             <width>20</width>
             <height>305</height>
         </control>
@@ -651,8 +640,16 @@
 		 <control type="image">
             <description>Description Line</description>
             <posx>0</posx>
-            <posy>395</posy>
-            <width>1340</width>
+            <posy>715</posy>
+            <width>1440</width>
+            <height>1</height>
+            <texture>3333.png</texture>
+        </control>
+		 <control type="image">
+            <description>Description Line</description>
+            <posx>0</posx>
+            <posy>390</posy>
+            <width>1440</width>
             <height>1</height>
             <texture>3333.png</texture>
         </control>
@@ -660,7 +657,7 @@
             <description>Description Line</description>
             <posx>0</posx>
             <posy>45</posy>
-            <width>1340</width>
+            <width>1440</width>
             <height>1</height>
             <texture>3333.png</texture>
         </control>
@@ -668,22 +665,15 @@
             <description>Description Line</description>
             <posx>0</posx>
             <posy>80</posy>
-            <width>1340</width>
+            <width>1440</width>
             <height>1</height>
             <texture>3333.png</texture>
         </control>
-		<control type="image">
-            <description>Description Line</description>
-            <posx>220</posx>
-            <posy>200</posy>
-            <width>1</width>
-            <height>50</height>
-            <texture>bar2.png</texture>
-        </control>
+		
 		<control type="image">
             <description>Description Line</description>
             <posx>290</posx>
-            <posy>400</posy>
+            <posy>390</posy>
             <width>1</width>
             <height>350</height>
             <texture>3333V.png</texture>
@@ -712,18 +702,10 @@
             <height>30</height>
             <texture>3333V.png</texture>
         </control>
-		<control type="image">
-            <description>Description Line</description>
-            <posx>960</posx>
-            <posy>450</posy>
-            <width>1</width>
-            <height>330</height>
-            <texture>3333V.png</texture>
-        </control>
 		<!--rss control-->
 	<control type="rss" id="1">				
   <description>RSS ticker</description>
-  <posx>-7000</posx>
+  <posx>300</posx>
   <posy>695</posy>
   <width>1280</width>
   <visible>true</visible>

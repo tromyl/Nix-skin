@@ -257,7 +257,7 @@
 				<font>font13_title</font>
 				<aspectratio align="left">keep</aspectratio>
 				<textcolor>FFFFFFFF</textcolor>
-				<label fallback="PseudoTV Live">$INFO[VideoPlayer.RatingAndVotes, ]</label>
+				<label fallback="PseudoTV Live">$INFO[VideoPlayer.Rating, ]</label>
 			</control>
 			</control>
 			<!-- Videos Info -->
@@ -461,7 +461,7 @@
                 </control>
 					 <control type="image">
             <description>Description Line</description>
-            <posx>300</posx>
+            <posx>280</posx>
             <posy>607</posy>
             <width>560</width>
             <height>1</height>
